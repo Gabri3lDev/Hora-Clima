@@ -1,0 +1,349 @@
+@font-face {
+    font-family: Poppins;
+    src: url(Fontes/Poppins-Bold.ttf) format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image:linear-gradient(45deg, #141516 0%, #1e1e23 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #111;
+    box-shadow: inset 4px 4px 5px #444, inset -4px -4px 5px #000;
+    width: 450px;
+    height: 450px;
+    border-radius: 30px;
+}
+
+.swiper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.swiper-slide{
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+}
+
+.swiper-slide:active{
+    cursor: grabbing;
+}
+
+.horaA{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    border-radius: 30px 0px 0px 30px;
+}
+
+#back{
+    position: absolute;
+    width: 100%;
+    display: none;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 40%;
+}
+
+.Temp{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+}
+
+.Temp i{
+    font-size: 120px;
+}
+
+#Moon{
+    color: #00000000;
+    background: linear-gradient(220deg, #ffffff 0%, #848484 100% );
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: none;
+}
+
+#Sun{
+    color: gold;
+    display: none;
+}
+
+#CloudSun{
+    display: none;
+    color: #00000000;
+    background: linear-gradient(-45deg, #999 46%, gold 60% );
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#CloudMoon{
+    display: none;
+    color: #00000000;
+    background: linear-gradient(45deg, #999 46%, #f4f4f4 60% );
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#Clouds{
+    display: none;
+    color: #999;
+}
+
+#Storm{
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#nuvemEtc{
+    position: absolute;
+    color: #333;
+}
+
+#EtcRaio{
+    transform: translateY(80px) translateX(-5px);
+    font-size: 100px;
+    z-index: 1;
+    position: absolute;
+    color: gold;
+}
+
+#EtcRaio2{
+    transform: translateY(80px) translateX(-5px) scale(1.2);
+    font-size: 100px;
+    text-shadow: 5px 0 0 #ff001e, 3px 0 0 #ff001e;
+    position: absolute;
+    color: #ff001e;
+}
+
+#Rain{
+    display: none;
+    color: #00000000;
+    background: linear-gradient(0deg, #2338d8 30%, #f4f4f4 40% );
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+h1{
+    font-family: 'Poppins';
+    font-size: 100px;
+    color: #eeeeee;
+}
+
+.swip{
+    font-family: 'Poppins';
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    opacity: 10%;
+    width: 100%;
+    color: #eeeeee;
+}
+
+.swip i{
+    padding-left: 7px;
+}
+
+#City{
+    font-family: 'Poppins';
+    font-size: 26px;
+    border-bottom: solid 3px #d6d6d6c5;
+    text-align: center;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    color: #eeeeee;
+}
+
+#Umidade{
+    font-family: 'Poppins';
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #a3d2e7;
+}
+
+#Vento{
+    font-family: 'Poppins';
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #cacaca;
+}
+
+.detalhes{
+    margin-top: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.umi, .vent{
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.img1{
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    filter: saturate(130%);
+}
+
+.img2{
+    margin-right: 5px;
+    width: 23px;
+    height: 23px;
+    filter: invert() brightness(85%);
+}
+
+.hor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 140px;
+}
+
+#hora, #minuto{
+    font-family: 'Poppins';
+    color: #eeeeee;
+}
+
+.pulse{
+    font-family: 'Poppins';
+    color: #eeeeee;
+    animation:pulse .7s infinite;
+    margin: 0 10px;
+    padding-bottom: 15px;
+}
+
+@keyframes pulse {
+    0%{opacity: 100%;}
+    50%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+
+.dat{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    justify-content: center;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #eeeeee;
+}
+
+.data{
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #eeeeee;
+    display: flex;
+    align-items: center;
+}
+
+.separation{
+    font-family: 'Poppins';
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #eeeeee;
+    display: flex;
+    margin: 0 5px;
+    align-items: center;
+}
+
+@media only screen and (max-width: 460px ){
+    
+    .hor{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 6rem;
+    }
+
+    .container{
+        width: 90vw;
+        height: 350px;
+    }
+    
+    .Temp i{
+        font-size: 5rem;
+    }
+
+    h1{
+        font-size: 100px;
+    }
+    
+    #City{
+        font-size: 26px;
+    }
+    
+    #Umidade{
+        font-size: 20px;
+    }
+    
+    #Vento{
+        font-size: 20px;
+    }
+    
+    .img1{
+        width: 17px;
+        height: 17px;
+    }
+    
+    .img2{
+        width: 20px;
+        height: 20px;
+    }
+}

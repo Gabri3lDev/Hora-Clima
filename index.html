@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link  rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://kit.fontawesome.com/b5afd26a30.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="./imgs/clima.png">
+        <title>Hora / Clima</title>
+    </head>
+    <body>
+        <main>
+            <section>
+                <div class="container">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <p class="swip">desliza para a direita<i class="fa-solid fa-angles-right"></i></p>
+                                <div class="horaA">
+                                    <div class="hor">
+                                        <p id="hora"></p>
+                                        <p class="pulse">:</p>
+                                        <p id="minuto"></p>
+                                    </div>
+
+                                    <div class="dat">
+                                        <p id="diaSem"></p>
+                                        <div class="data">
+                                            <p id="Dia"></p>
+                                            <p class="separation">/</p>
+                                            <p id="mes"></p>
+                                            <p class="separation">/</p>
+                                            <p id="ano"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="Temp">
+                                    <div class="is">
+                                        <i id="Moon" class="fa-solid fa-moon"></i>
+                                        <i id="Sun" class="fa-solid fa-sun"></i>
+                                    </div>
+
+                                    <div class="infClima">
+                                        <h1 id="TempC"></h1>
+                                        <h2 id="City"></h2>
+                                        <div class="detalhes">
+                                            <div class="umi"><img class="img1" src="imgs/gota-de-agua.png"><p id="Umidade"></p></div>
+                                            <div class="vent"><img class="img2" src="imgs/vento2.png"><p id="Vento"></p></div>
+                                        </div>
+                                    </div>
+
+                                    <img id="back" src="imgs/images-removebg-preview.png">
+
+                                </div>
+                            </div>
+
+                        </div>                 
+                </div>
+            </section>
+        </main>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
