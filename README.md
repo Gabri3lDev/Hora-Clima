@@ -1,4 +1,6 @@
-<img align="center" width="300" src="./imgs/clima.png">
+<div align='center'>
+   <img width="300" src="./imgs/clima.png">
+</div>
 
 ---
 
